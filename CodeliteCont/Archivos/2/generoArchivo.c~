@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stlib.h>
+#include "alumno.h"
+int main(int argc, char *argv[]){
+Alumno alu;
+FILE *archi;
+if ( (archi=fopen("alumnos.dat", "w") ) != NULL){
+      fprintf(stdout,"\nLegajo?(-1:FIN)");
+      fscanf(stdin, "%d", &(alu.legajo));
+      while (alu.legajo!=-1)  {
+          fprintf(stdout, "\nNombre?");
+          fscanf(stdin,"%s",alu.nombre);
+          fwrite(&alu, sizeof(Alumno), 1,archi);
+          fprintf(stdout,"\nLegajo?(-1:FIN)");
+          fscanf(stdin,"%d",&alu.legajo);
+      }
+      fclose(archi);
+}
+else fprintf(stderr,"No se pudo crear el archivo");
+return 0;
+}

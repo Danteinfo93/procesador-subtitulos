@@ -1,0 +1,18 @@
+int cmp_tiempo(t_tiempo t1,t_tiempo t2) { // devuelve menor, igual o mayor a 0.. correspondiendose a la diferencia de t1 - t2
+	int aux[4];
+	int cont=0;
+	int i,cortar=0,mayor=0;
+
+	aux[0]= t1.HH - t2.HH;
+	aux[1]= t1.MM - t2.MM;
+	aux[2]= t1.SS - t2.SS;
+	aux[3]= t1.mmm - t2.mmm;
+	for(i=0;((i<=3)&&(!cortar));i++){
+		if(aux[i]>0){mayor=1;cortar=1;}
+	    if(aux[i]<0){mayor=0;cortar=1;}
+		if(aux[i]==0)cont=cont+1;
+	}
+	if(cont==4)return 0;
+	if(mayor) return 1;
+	else return -1;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Workspace Name="CodeliteCont" Database="./CodeliteCont.tags">
+  <Project Name="TpFinal" Path="TpFinal/TpFinal.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Project Name="Exp" ConfigName="Debug"/>
+      <Project Name="TpFinal" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="Exp" ConfigName="Release"/>
+      <Project Name="TpFinal" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
